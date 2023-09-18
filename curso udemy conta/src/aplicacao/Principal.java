@@ -32,6 +32,20 @@ public class Principal {
 		System.out.println("Dados atualizados:");
 		System.out.println(conta);
 		
+		System.out.println();
+		System.out.print("Qual o valor do depósito? ");
+		double deposito = sc.nextDouble();
+		conta.depositar(deposito);
+		System.out.println("Dados atulizados:");
+		System.out.println(conta);
+		
+		System.out.println();
+		System.out.print("Qual o valor do saque? ");
+		double saque = sc.nextDouble();
+		conta.sacar(saque);
+		System.out.println("Dados atualizados:");
+		System.out.println(conta);
+		
 		
 		sc.close();
 
