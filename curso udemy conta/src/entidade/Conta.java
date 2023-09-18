@@ -50,7 +50,7 @@ public class Conta {
 				+ numeroConta
 				+ ", titular: "
 				+ titular
-				+ ", saldo: $ "
+				+ ", saldo: $"
 				+ String.format("%.2f", saldo);
 	}
 	
