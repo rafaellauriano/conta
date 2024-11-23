@@ -42,6 +42,11 @@ public class Conta {
 		return saldo;
 	}
 	
+	//Métodos
+	public void depositar(double valor) {
+		saldo += valor;
+	}
+	
 	public boolean sacar(double valor) {
 		if(saldo < valor) {
 			System.out.println("Saldo insulficiente!! Saque não realizado...");
@@ -53,8 +58,9 @@ public class Conta {
 		}
 	}
 	
-	public void depositar(double valor) {
-		saldo += valor;
+	public void transferirPara(Conta destino, double valor) {
+		 this.saldo = this.saldo - valor;
+	        destino.saldo = destino.saldo + valor;
 	}
 
 	@Override

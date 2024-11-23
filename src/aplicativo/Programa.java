@@ -56,6 +56,19 @@ public class Programa {
 		}
 		
 		
+		System.out.println();
+		System.out.print("Dejeja fazer uma tranferência(s/n): ");
+		resposta = sc.next().charAt(0);
+		if(resposta == 's') {
+			System.out.print("Digite o valor da transferência: ");
+			double valor = sc.nextDouble();
+			Conta contaRafael = new Conta();
+			contaRafael.transferirPara(conta, valor);
+			
+			System.out.println("Dados da conta");
+			System.out.println(conta);
+		}
+		
 		sc.close();
 		
 
