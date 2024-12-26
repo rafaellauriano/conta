@@ -62,10 +62,8 @@ public class Programa {
 		if(resposta == 's') {
 			System.out.print("Digite o valor da transferência: ");
 			double valor = sc.nextDouble();
-			Conta contaRafael = new Conta();
-			contaRafael.transferirPara(conta, valor);
-			
-			System.out.println("Dados da conta");
+			conta.transferirPara(conta, valor);
+			System.out.println("Dados atualiados");
 			System.out.println(conta);
 		}
 		

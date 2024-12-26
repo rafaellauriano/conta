@@ -59,8 +59,13 @@ public class Conta {
 	}
 	
 	public void transferirPara(Conta destino, double valor) {
-		 this.saldo = this.saldo - valor;
-	        destino.saldo = destino.saldo + valor;
+		if(valor > saldo) {
+			System.out.println("Saldo insulficiente!!");
+		}else {
+			 this.saldo -= valor;
+		       
+		}
+		
 	}
 
 	@Override
