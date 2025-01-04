@@ -40,7 +40,7 @@ public class Conta {
 	public void depositar(double valor) {
 		if(valor > 0) {
 			saldo += valor;
-			System.out.println("Deposito foi realizado com sucesso!");
+			//System.out.println("Deposito foi realizado com sucesso!");
 		}else {
 			System.out.println("Não foi possível depositar!");
 		}
@@ -52,7 +52,6 @@ public class Conta {
 			return false;
 		}else {
 			saldo -= valor ;
-			System.out.println("Saque realiado com sucesso!!");
 			return true;
 		}
 	}
