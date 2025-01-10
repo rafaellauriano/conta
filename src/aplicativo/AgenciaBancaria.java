@@ -20,48 +20,51 @@ public class AgenciaBancaria {
 	}
 	
 	public static void operacoes() {
+		int operacao = 0;
 		
-		System.out.println("------------------------------------------------------");
-		System.out.println("--------------Bem vindos a nossa Agência--------------");
-		System.out.println("------------------------------------------------------");
-		System.out.println("***** Selecione uma operação que deseja realizar *****");
-		System.out.println("------------------------------------------------------");
-		System.out.println("|   Opção 1 - Criar conta   |");
-		System.out.println("|   Opção 2 - Depositar     |");
-		System.out.println("|   Opção 3 - Sacar         |");
-		System.out.println("|   Opção 4 - Trânsferir    |");
-		System.out.println("|   Opção 5 - Listar        |");
-		System.out.println("|   Opção 6 - Sair          |");
-		System.out.println();
-		
-		int operacao = sc.nextInt();
-		
-		switch(operacao) {
-		case 1:
-			criarConta();
-			break;
-		case 2:
-			depositar();
-			break;
-		case 3:
-			sacar();
-			break;
-		case 4:
-			transferir();
-			break;
-		case 5:
-			listarContas();
-			break;
-		case 6:
-			System.out.println("Obrigado por usar nossa agência");
+		while(operacao != 6) {
+			System.out.println("------------------------------------------------------");
+			System.out.println("--------------Bem vindos a nossa Agência--------------");
+			System.out.println("------------------------------------------------------");
+			System.out.println("***** Selecione uma operação que deseja realizar *****");
+			System.out.println("------------------------------------------------------");
+			System.out.println("|   Opção 1 - Criar conta   |");
+			System.out.println("|   Opção 2 - Depositar     |");
+			System.out.println("|   Opção 3 - Sacar         |");
+			System.out.println("|   Opção 4 - Trânsferir    |");
+			System.out.println("|   Opção 5 - Listar        |");
+			System.out.println("|   Opção 6 - Sair          |");
 			System.out.println();
 			
-		default:
-			System.out.println("Opção inválida!");
-			operacoes();
-			break;
+			operacao = sc.nextInt();
+			
+			switch(operacao) {
+			case 1:
+				criarConta();
+				break;
+			case 2:
+				depositar();
+				break;
+			case 3:
+				sacar();
+				break;
+			case 4:
+				transferir();
+				break;
+			case 5:
+				listarContas();
+				break;
+			case 6:
+				System.out.println("Obrigado por usar nossa agência");
+				System.out.println();
+				break;
+				
+			default:
+				System.out.println("Opção inválida!");
+				break;
+			}
+		
 		}
-	
 	}
 	
 	public static void criarConta() {
@@ -84,8 +87,8 @@ public class AgenciaBancaria {
 		contasBancarias.add(conta);
 		
 		System.out.println("Conta criada com sucesso");
+		System.out.println();
 		
-		operacoes();
 	}
 	
 	//método para encontrar uma conta existente
@@ -116,7 +119,6 @@ public class AgenciaBancaria {
 		}else {
 			System.out.println("conta não encontrada! ");
 		}
-		operacoes();
 	}
 	
 	public static void sacar() {
@@ -134,7 +136,6 @@ public class AgenciaBancaria {
 		}else {
 			System.out.println("conta não encontrada!");
 		}
-		operacoes();
 		
 	}
 	
@@ -157,7 +158,7 @@ public class AgenciaBancaria {
 				contaRemetente.transferirPara(contaDestinatario, valor);
 			}
 		}
-		operacoes();
+		
 	}
 	
 	public static void listarContas() {
@@ -168,7 +169,7 @@ public class AgenciaBancaria {
 		}else {
 			System.out.println("Não há contas cadrastadas");
 		}
-		operacoes();
+		
 	}
 	
 
